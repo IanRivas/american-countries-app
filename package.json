@@ -13,8 +13,8 @@
   "main": "index.js",
   "scripts": {
     "build": "SKIP_PREFLIGHT_CHECK=true npm run build --workspace=app",
-    "start": "npm run start --workspace=app",
-    "api": "npm run dev --workspace=api"
+    "start": "npm run dev --workspace=api",
+    "dev:api": "npm run build && npm run dev --workspace=api"
   },
   "keywords": [],
   "author": "",
