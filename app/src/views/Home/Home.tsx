@@ -25,7 +25,7 @@ function Home({ isTheme }: Props): JSX.Element {
   const [search, setSearch] = useState('');
   const [region, setRegion] = useState('None');
   const { isLoading, error, data } = useQuery('apiData', () =>
-    fetch(`http://localhost:3001/api`).then((res) => res.json())
+    fetch(`/api`).then((res) => res.json())
   );
 
   if (isLoading) return <h3>Loading...</h3>;

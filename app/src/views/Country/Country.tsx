@@ -16,7 +16,7 @@ type Props = {
 function Country({ isTheme }: Props): JSX.Element {
   const { countryName } = useParams<CountryParams>();
   const { isLoading, error, data } = useQuery('apiData', () =>
-    fetch('http://localhost:3001/api').then((res) => res.json())
+    fetch('/api').then((res) => res.json())
   );
 
   if (isLoading) return <h3>Loading...</h3>;
@@ -28,7 +28,7 @@ function Country({ isTheme }: Props): JSX.Element {
   const { name, capital, region, population, flag, lenguage } = api.find(
     (country: DataType) => country.name === countryName
   );
-  const completeFlag = `http://localhost:3001/countries/${flag}`;
+  const completeFlag = `/countries/${flag}`;
 
   return (
     <Wrapper>

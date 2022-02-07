@@ -9,7 +9,7 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build --workspace=app",
     "start": "npm run start --workspace=app",
     "api": "npm run dev --workspace=api"
   },
