@@ -14,7 +14,7 @@
   "scripts": {
     "build": "SKIP_PREFLIGHT_CHECK=true npm run build --workspace=app && npm run build --workspace=api",
     "start": "npm run start --workspace=api",
-    "dev:api": "npm run build && npm run dev --workspace=api"
+    "dev": "npm run dev --workspace=api"
   },
   "keywords": [],
   "author": "",
